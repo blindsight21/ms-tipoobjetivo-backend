@@ -1,0 +1,72 @@
+{"properties": [
+  {
+    "name": "spring.datasource.seguridad.url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.seguridad.url'"
+  },
+  {
+    "name": "spring.datasource.seguridad.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.seguridad.username'"
+  },
+  {
+    "name": "spring.datasource.seguridad.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.seguridad.password'"
+  },
+  {
+    "name": "spring.datasource.general.url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.general.url'"
+  },
+  {
+    "name": "spring.datasource.general.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.general.username'"
+  },
+  {
+    "name": "spring.datasource.general.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.general.password'"
+  },
+  {
+    "name": "spring.datasource.general.driver-class-name",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.general.driver-class-name'"
+  },
+  {
+    "name": "spring.datasource.seguridad.driver-class-name",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.seguridad.driver-class-name'"
+  },
+  {
+    "name": "eclipselink.weaving",
+    "type": "java.lang.String",
+    "description": "A description for 'eclipselink.weaving'"
+  },
+  {
+    "name": "spring.datasource.siscap.url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.siscap.url'"
+  },
+  {
+    "name": "spring.datasource.siscap.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.siscap.username'"
+  },
+  {
+    "name": "spring.datasource.siscap.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.siscap.password'"
+  },
+  {
+    "name": "spring.datasource.siscap.driver-class-name",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.siscap.driver-class-name'"
+  },
+  {
+    "name": "eclipselink.ddl-generation",
+    "type": "java.lang.String",
+    "description": "A description for 'eclipselink.ddl-generation'"
+  }
+]}
