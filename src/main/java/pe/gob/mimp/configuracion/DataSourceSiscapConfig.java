@@ -91,7 +91,8 @@ public class DataSourceSiscapConfig{
 	}
 
 	@Bean(name = "siscapTransactionManager")
-        @ConditionalOnMissingBean(PlatformTransactionManager.class)
+	@Primary
+	//@ConditionalOnMissingBean(PlatformTransactionManager.class)
 	public PlatformTransactionManager productTransactionManager(
 			@Qualifier("siscapEntityManagerFactory") EntityManagerFactory siscapEntityManagerFactory) {
 
