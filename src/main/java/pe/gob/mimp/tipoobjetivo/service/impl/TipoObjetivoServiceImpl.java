@@ -35,14 +35,7 @@ public class TipoObjetivoServiceImpl implements TipoObjetivoService {
     @Override
     public void crearTipoObjetivo(TipoObjetivoBean tipoObjetivoBean) throws Exception {
 
-        TipoObjetivo tipoObjetivo = new TipoObjetivo();
-        tipoObjetivo.setTxtTipoObjetivo(tipoObjetivoBean.getTxtTipoObjetivo());
-        tipoObjetivo.setNidUsuario(tipoObjetivoBean.getNidUsuario());
-        tipoObjetivo.setTxtPc(tipoObjetivoBean.getTxtPc());
-        tipoObjetivo.setTxtIp(tipoObjetivoBean.getTxtIp());
-        tipoObjetivo.setFecEdicion(tipoObjetivoBean.getFecEdicion());
-        tipoObjetivo.setFlgActivo(tipoObjetivoBean.getFlgActivo());
-
+        TipoObjetivo tipoObjetivo = TipoObjetivoCast.castTipoObjetivoBeanToTipoObjetivo(tipoObjetivoBean);
         tipoObjetivoRepository.save(tipoObjetivo);
 
     }
@@ -50,16 +43,7 @@ public class TipoObjetivoServiceImpl implements TipoObjetivoService {
     @Override
     public void editarTipoObjetivo(TipoObjetivoBean tipoObjetivoBean) {
 
-        TipoObjetivo tipoObjetivo = new TipoObjetivo();
-
-        tipoObjetivo.setNidTipoObjetivo(tipoObjetivoBean.getNidTipoObjetivo());
-        tipoObjetivo.setTxtTipoObjetivo(tipoObjetivoBean.getTxtTipoObjetivo());
-        tipoObjetivo.setNidUsuario(tipoObjetivoBean.getNidUsuario());
-        tipoObjetivo.setTxtPc(tipoObjetivoBean.getTxtPc());
-        tipoObjetivo.setTxtIp(tipoObjetivoBean.getTxtIp());
-        tipoObjetivo.setFecEdicion(tipoObjetivoBean.getFecEdicion());
-        tipoObjetivo.setFlgActivo(tipoObjetivoBean.getFlgActivo());
-
+        TipoObjetivo tipoObjetivo = TipoObjetivoCast.castTipoObjetivoBeanToTipoObjetivo(tipoObjetivoBean);
         tipoObjetivoRepository.saveAndFlush(tipoObjetivo);
 
     }
@@ -88,15 +72,7 @@ public class TipoObjetivoServiceImpl implements TipoObjetivoService {
         if (!Util.esListaVacia(tipoObjetivoList)) {
 
             return tipoObjetivoList.stream().map(tipoObjetivo -> {
-                TipoObjetivoBean tipoObjetivoBean = new TipoObjetivoBean();
-                tipoObjetivoBean.setNidTipoObjetivo(tipoObjetivo.getNidTipoObjetivo());
-                tipoObjetivoBean.setTxtTipoObjetivo(tipoObjetivo.getTxtTipoObjetivo());
-                tipoObjetivoBean.setNidUsuario(tipoObjetivo.getNidUsuario());
-                tipoObjetivoBean.setTxtPc(tipoObjetivo.getTxtPc());
-                tipoObjetivoBean.setTxtIp(tipoObjetivo.getTxtIp());
-                tipoObjetivoBean.setFecEdicion(tipoObjetivo.getFecEdicion());
-                tipoObjetivoBean.setFlgActivo(tipoObjetivo.getFlgActivo());
-                return tipoObjetivoBean;
+                return TipoObjetivoCast.castTipoObjetivoToTipoObjetivoBean(tipoObjetivo);
             }).collect(Collectors.toList());
         }
 
